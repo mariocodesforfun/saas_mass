@@ -1,0 +1,23 @@
+{
+  "name": "saas-mass",
+  "private": true,
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @saas-mass/web",
+    "build": "npm run build -w @saas-mass/web",
+    "lint": "npm run lint -w @saas-mass/web",
+    "typecheck": "npm run typecheck -w @saas-mass/web",
+    "test": "npm run typecheck && npm run test:api",
+    "test:api": "cd apps/api && .venv/bin/python -m pytest",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  },
+  "engines": {
+    "node": ">=22",
+    "npm": ">=11"
+  }
+}

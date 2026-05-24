@@ -1,0 +1,2 @@
+-- Seed data belongs to local development. Create users from Supabase Auth UI or CLI,
+-- then product-specific seed scripts can add organization-owned data through service role.
